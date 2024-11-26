@@ -12,9 +12,9 @@ public class Calculator {
 
     //http://localhost:8080/calculate/start?digitOne=3&operation=plus&digitTwo=5
     @GetMapping("/start")
-    public String solve(@RequestParam(value = "digitOne", required = false) Double digitOne,
-                        @RequestParam(value = "operation", required = false) String operation,
-                        @RequestParam(value = "digitTwo", required = false) Double digitTwo,
+    public String solve(@RequestParam(value = "digitOne") Double digitOne,
+                        @RequestParam(value = "operation") String operation,
+                        @RequestParam(value = "digitTwo") Double digitTwo,
                         Model model) {
 
         Double result = switch (operation) {
